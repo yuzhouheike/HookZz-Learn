@@ -1,0 +1,755 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28F507F820BB1942005FCD25 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28F507F720BB1942005FCD25 /* MDConfig.plist */; };
+		28F5080220BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 28F5080120BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		28F5080720BB1942005FCD25 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5080620BB1942005FCD25 /* JavaScriptCore.framework */; };
+		28F5080920BB1942005FCD25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5080820BB1942005FCD25 /* Foundation.framework */; };
+		28F5080B20BB1942005FCD25 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5080A20BB1942005FCD25 /* UIKit.framework */; };
+		28F5081020BB1942005FCD25 /* __HookZZ_MDDylib.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28F5080F20BB1942005FCD25 /* __HookZZ_MDDylib.mm */; };
+		28F5081320BB1942005FCD25 /* MDConfigManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5081220BB1942005FCD25 /* MDConfigManager.h */; };
+		28F5081520BB1942005FCD25 /* MDConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5081420BB1942005FCD25 /* MDConfigManager.m */; };
+		28F5081720BB1942005FCD25 /* MDCycriptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5081620BB1942005FCD25 /* MDCycriptManager.h */; };
+		28F5081920BB1942005FCD25 /* MDCycriptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5081820BB1942005FCD25 /* MDCycriptManager.m */; };
+		28F5081B20BB1942005FCD25 /* MDMethodTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5081A20BB1942005FCD25 /* MDMethodTrace.h */; };
+		28F5081D20BB1942005FCD25 /* MDMethodTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5081C20BB1942005FCD25 /* MDMethodTrace.m */; };
+		28F5081F20BB1942005FCD25 /* ANYMethodLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5081E20BB1942005FCD25 /* ANYMethodLog.h */; };
+		28F5082120BB1942005FCD25 /* ANYMethodLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5082020BB1942005FCD25 /* ANYMethodLog.m */; };
+		28F5082420BB1942005FCD25 /* LLDBTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5082320BB1942005FCD25 /* LLDBTools.h */; };
+		28F5082620BB1942005FCD25 /* LLDBTools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 28F5082520BB1942005FCD25 /* LLDBTools.mm */; };
+		28F5082B20BB1942005FCD25 /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5082A20BB1942005FCD25 /* AntiAntiDebug.m */; };
+		28F5082E20BB1942005FCD25 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 28F5082D20BB1942005FCD25 /* fishhook.c */; };
+		28F5083020BB1942005FCD25 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5082F20BB1942005FCD25 /* fishhook.h */; };
+		28F5083220BB1942005FCD25 /* __HookZZ_MDDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5083120BB1942005FCD25 /* __HookZZ_MDDylib.h */; };
+		28F5083420BB1942005FCD25 /* __HookZZ_MDDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5083320BB1942005FCD25 /* __HookZZ_MDDylib.m */; };
+		28F5084120BB1978005FCD25 /* hookzz.h in Headers */ = {isa = PBXBuildFile; fileRef = 28F5083F20BB1978005FCD25 /* hookzz.h */; };
+		28F5084220BB1978005FCD25 /* libhookzz.static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5084020BB1978005FCD25 /* libhookzz.static.a */; };
+		28F5084420BB1A83005FCD25 /* Print.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5084320BB1A83005FCD25 /* Print.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		28F5084620BB1B6E005FCD25 /* HookZZObjcMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5084520BB1B6E005FCD25 /* HookZZObjcMsg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28F5080320BB1942005FCD25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28F507E420BB1942005FCD25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F5080020BB1942005FCD25;
+			remoteInfo = "测试HookZZ-MDDylib";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		28F507EC20BB1942005FCD25 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				28F5080220BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		28F507EF20BB1942005FCD25 /* 测试HookZZ-MD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "测试HookZZ-MD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F507F220BB1942005FCD25 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		28F507F320BB1942005FCD25 /* Target.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Target.plist; sourceTree = "<group>"; };
+		28F507F520BB1942005FCD25 /* quick-resign.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = "quick-resign.sh"; path = "Scripts/quick-resign.sh"; sourceTree = "<group>"; };
+		28F507F720BB1942005FCD25 /* MDConfig.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = MDConfig.plist; path = Config/MDConfig.plist; sourceTree = "<group>"; };
+		28F507FA20BB1942005FCD25 /* put ipa or app here */ = {isa = PBXFileReference; lastKnownFileType = text; name = "put ipa or app here"; path = "TargetApp/put ipa or app here"; sourceTree = "<group>"; };
+		28F507FB20BB1942005FCD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F5080120BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "lib测试HookZZ-MDDylib.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F5080620BB1942005FCD25 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		28F5080820BB1942005FCD25 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		28F5080A20BB1942005FCD25 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		28F5080E20BB1942005FCD25 /* __HookZZ_MDDylib.xm */ = {isa = PBXFileReference; lastKnownFileType = text; name = __HookZZ_MDDylib.xm; path = Logos/__HookZZ_MDDylib.xm; sourceTree = "<group>"; };
+		28F5080F20BB1942005FCD25 /* __HookZZ_MDDylib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = __HookZZ_MDDylib.mm; path = Logos/__HookZZ_MDDylib.mm; sourceTree = "<group>"; };
+		28F5081220BB1942005FCD25 /* MDConfigManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDConfigManager.h; path = Config/MDConfigManager.h; sourceTree = "<group>"; };
+		28F5081420BB1942005FCD25 /* MDConfigManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDConfigManager.m; path = Config/MDConfigManager.m; sourceTree = "<group>"; };
+		28F5081620BB1942005FCD25 /* MDCycriptManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDCycriptManager.h; path = Config/MDCycriptManager.h; sourceTree = "<group>"; };
+		28F5081820BB1942005FCD25 /* MDCycriptManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDCycriptManager.m; path = Config/MDCycriptManager.m; sourceTree = "<group>"; };
+		28F5081A20BB1942005FCD25 /* MDMethodTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MDMethodTrace.h; path = Config/MDMethodTrace.h; sourceTree = "<group>"; };
+		28F5081C20BB1942005FCD25 /* MDMethodTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MDMethodTrace.m; path = Config/MDMethodTrace.m; sourceTree = "<group>"; };
+		28F5081E20BB1942005FCD25 /* ANYMethodLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ANYMethodLog.h; path = Config/ANYMethodLog.h; sourceTree = "<group>"; };
+		28F5082020BB1942005FCD25 /* ANYMethodLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ANYMethodLog.m; path = Config/ANYMethodLog.m; sourceTree = "<group>"; };
+		28F5082320BB1942005FCD25 /* LLDBTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LLDBTools.h; path = Tools/LLDBTools.h; sourceTree = "<group>"; };
+		28F5082520BB1942005FCD25 /* LLDBTools.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = LLDBTools.mm; path = Tools/LLDBTools.mm; sourceTree = "<group>"; };
+		28F5082820BB1942005FCD25 /* 测试HookZZ-MDDylib-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "测试HookZZ-MDDylib-Prefix.pch"; sourceTree = "<group>"; };
+		28F5082A20BB1942005FCD25 /* AntiAntiDebug.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AntiAntiDebug.m; path = AntiAntiDebug/AntiAntiDebug.m; sourceTree = "<group>"; };
+		28F5082D20BB1942005FCD25 /* fishhook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = fishhook.c; path = fishhook/fishhook.c; sourceTree = "<group>"; };
+		28F5082F20BB1942005FCD25 /* fishhook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = fishhook.h; path = fishhook/fishhook.h; sourceTree = "<group>"; };
+		28F5083120BB1942005FCD25 /* __HookZZ_MDDylib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = __HookZZ_MDDylib.h; sourceTree = "<group>"; };
+		28F5083320BB1942005FCD25 /* __HookZZ_MDDylib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __HookZZ_MDDylib.m; sourceTree = "<group>"; };
+		28F5083F20BB1978005FCD25 /* hookzz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hookzz.h; sourceTree = "<group>"; };
+		28F5084020BB1978005FCD25 /* libhookzz.static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhookzz.static.a; sourceTree = "<group>"; };
+		28F5084320BB1A83005FCD25 /* Print.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Print.m; sourceTree = "<group>"; };
+		28F5084520BB1B6E005FCD25 /* HookZZObjcMsg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookZZObjcMsg.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28F507E920BB1942005FCD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F507FE20BB1942005FCD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5080720BB1942005FCD25 /* JavaScriptCore.framework in Frameworks */,
+				28F5080B20BB1942005FCD25 /* UIKit.framework in Frameworks */,
+				28F5080920BB1942005FCD25 /* Foundation.framework in Frameworks */,
+				28F5084220BB1978005FCD25 /* libhookzz.static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28F507E320BB1942005FCD25 = {
+			isa = PBXGroup;
+			children = (
+				28F5083D20BB1978005FCD25 /* WLL-HookZZ */,
+				28F507F120BB1942005FCD25 /* 测试HookZZ-MD */,
+				28F5080C20BB1942005FCD25 /* 测试HookZZ-MDDylib */,
+				28F5080520BB1942005FCD25 /* Frameworks */,
+				28F507F020BB1942005FCD25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28F507F020BB1942005FCD25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28F507EF20BB1942005FCD25 /* 测试HookZZ-MD.app */,
+				28F5080120BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28F507F120BB1942005FCD25 /* 测试HookZZ-MD */ = {
+			isa = PBXGroup;
+			children = (
+				28F507F220BB1942005FCD25 /* icon.png */,
+				28F507F320BB1942005FCD25 /* Target.plist */,
+				28F507FB20BB1942005FCD25 /* Info.plist */,
+				28F507F420BB1942005FCD25 /* Scripts */,
+				28F507F620BB1942005FCD25 /* Config */,
+				28F507F920BB1942005FCD25 /* TargetApp */,
+			);
+			path = "测试HookZZ-MD";
+			sourceTree = "<group>";
+		};
+		28F507F420BB1942005FCD25 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				28F507F520BB1942005FCD25 /* quick-resign.sh */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		28F507F620BB1942005FCD25 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				28F507F720BB1942005FCD25 /* MDConfig.plist */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		28F507F920BB1942005FCD25 /* TargetApp */ = {
+			isa = PBXGroup;
+			children = (
+				28F507FA20BB1942005FCD25 /* put ipa or app here */,
+			);
+			name = TargetApp;
+			sourceTree = "<group>";
+		};
+		28F5080520BB1942005FCD25 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28F5080620BB1942005FCD25 /* JavaScriptCore.framework */,
+				28F5080820BB1942005FCD25 /* Foundation.framework */,
+				28F5080A20BB1942005FCD25 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28F5080C20BB1942005FCD25 /* 测试HookZZ-MDDylib */ = {
+			isa = PBXGroup;
+			children = (
+				28F5083120BB1942005FCD25 /* __HookZZ_MDDylib.h */,
+				28F5083320BB1942005FCD25 /* __HookZZ_MDDylib.m */,
+				28F5084320BB1A83005FCD25 /* Print.m */,
+				28F5084520BB1B6E005FCD25 /* HookZZObjcMsg.m */,
+				28F5080D20BB1942005FCD25 /* Logos */,
+				28F5081120BB1942005FCD25 /* Config */,
+				28F5082220BB1942005FCD25 /* Tools */,
+				28F5082920BB1942005FCD25 /* AntiAntiDebug */,
+				28F5082C20BB1942005FCD25 /* fishhook */,
+				28F5082720BB1942005FCD25 /* Supporting Files */,
+			);
+			path = "测试HookZZ-MDDylib";
+			sourceTree = "<group>";
+		};
+		28F5080D20BB1942005FCD25 /* Logos */ = {
+			isa = PBXGroup;
+			children = (
+				28F5080E20BB1942005FCD25 /* __HookZZ_MDDylib.xm */,
+				28F5080F20BB1942005FCD25 /* __HookZZ_MDDylib.mm */,
+			);
+			name = Logos;
+			sourceTree = "<group>";
+		};
+		28F5081120BB1942005FCD25 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				28F5081220BB1942005FCD25 /* MDConfigManager.h */,
+				28F5081420BB1942005FCD25 /* MDConfigManager.m */,
+				28F5081620BB1942005FCD25 /* MDCycriptManager.h */,
+				28F5081820BB1942005FCD25 /* MDCycriptManager.m */,
+				28F5081A20BB1942005FCD25 /* MDMethodTrace.h */,
+				28F5081C20BB1942005FCD25 /* MDMethodTrace.m */,
+				28F5081E20BB1942005FCD25 /* ANYMethodLog.h */,
+				28F5082020BB1942005FCD25 /* ANYMethodLog.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		28F5082220BB1942005FCD25 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				28F5082320BB1942005FCD25 /* LLDBTools.h */,
+				28F5082520BB1942005FCD25 /* LLDBTools.mm */,
+			);
+			name = Tools;
+			sourceTree = "<group>";
+		};
+		28F5082720BB1942005FCD25 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				28F5082820BB1942005FCD25 /* 测试HookZZ-MDDylib-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		28F5082920BB1942005FCD25 /* AntiAntiDebug */ = {
+			isa = PBXGroup;
+			children = (
+				28F5082A20BB1942005FCD25 /* AntiAntiDebug.m */,
+			);
+			name = AntiAntiDebug;
+			sourceTree = "<group>";
+		};
+		28F5082C20BB1942005FCD25 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				28F5082D20BB1942005FCD25 /* fishhook.c */,
+				28F5082F20BB1942005FCD25 /* fishhook.h */,
+			);
+			name = fishhook;
+			sourceTree = "<group>";
+		};
+		28F5083D20BB1978005FCD25 /* WLL-HookZZ */ = {
+			isa = PBXGroup;
+			children = (
+				28F5083E20BB1978005FCD25 /* include */,
+				28F5084020BB1978005FCD25 /* libhookzz.static.a */,
+			);
+			path = "WLL-HookZZ";
+			sourceTree = "<group>";
+		};
+		28F5083E20BB1978005FCD25 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				28F5083F20BB1978005FCD25 /* hookzz.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		28F507FF20BB1942005FCD25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5083220BB1942005FCD25 /* __HookZZ_MDDylib.h in Headers */,
+				28F5081720BB1942005FCD25 /* MDCycriptManager.h in Headers */,
+				28F5081B20BB1942005FCD25 /* MDMethodTrace.h in Headers */,
+				28F5084120BB1978005FCD25 /* hookzz.h in Headers */,
+				28F5082420BB1942005FCD25 /* LLDBTools.h in Headers */,
+				28F5081320BB1942005FCD25 /* MDConfigManager.h in Headers */,
+				28F5081F20BB1942005FCD25 /* ANYMethodLog.h in Headers */,
+				28F5083020BB1942005FCD25 /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		28F507EE20BB1942005FCD25 /* 测试HookZZ-MD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F5083A20BB1942005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZZ-MD" */;
+			buildPhases = (
+				28F507E820BB1942005FCD25 /* Sources */,
+				28F507E920BB1942005FCD25 /* Frameworks */,
+				28F507EA20BB1942005FCD25 /* ShellScript */,
+				28F507EB20BB1942005FCD25 /* Resources */,
+				28F507EC20BB1942005FCD25 /* CopyFiles */,
+				28F507ED20BB1942005FCD25 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28F5080420BB1942005FCD25 /* PBXTargetDependency */,
+			);
+			name = "测试HookZZ-MD";
+			productName = "测试HookZZ-MD";
+			productReference = 28F507EF20BB1942005FCD25 /* 测试HookZZ-MD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28F5080020BB1942005FCD25 /* 测试HookZZ-MDDylib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F5083720BB1942005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZZ-MDDylib" */;
+			buildPhases = (
+				28F507FC20BB1942005FCD25 /* ShellScript */,
+				28F507FD20BB1942005FCD25 /* Sources */,
+				28F507FE20BB1942005FCD25 /* Frameworks */,
+				28F507FF20BB1942005FCD25 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "测试HookZZ-MDDylib";
+			productName = "测试HookZZ-MDDylib";
+			productReference = 28F5080120BB1942005FCD25 /* lib测试HookZZ-MDDylib.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28F507E420BB1942005FCD25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "王磊磊";
+				TargetAttributes = {
+					28F507EE20BB1942005FCD25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					28F5080020BB1942005FCD25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 28F507E720BB1942005FCD25 /* Build configuration list for PBXProject "测试HookZZ-MD" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 28F507E320BB1942005FCD25;
+			productRefGroup = 28F507F020BB1942005FCD25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28F507EE20BB1942005FCD25 /* 测试HookZZ-MD */,
+				28F5080020BB1942005FCD25 /* 测试HookZZ-MDDylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28F507EB20BB1942005FCD25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F507F820BB1942005FCD25 /* MDConfig.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F507EA20BB1942005FCD25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = /opt/MonkeyDev/Tools/pack.sh;
+		};
+		28F507ED20BB1942005FCD25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/Tools/pack.sh codesign";
+		};
+		28F507FC20BB1942005FCD25 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28F507E820BB1942005FCD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F507FD20BB1942005FCD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5081920BB1942005FCD25 /* MDCycriptManager.m in Sources */,
+				28F5082120BB1942005FCD25 /* ANYMethodLog.m in Sources */,
+				28F5083420BB1942005FCD25 /* __HookZZ_MDDylib.m in Sources */,
+				28F5081520BB1942005FCD25 /* MDConfigManager.m in Sources */,
+				28F5082620BB1942005FCD25 /* LLDBTools.mm in Sources */,
+				28F5081020BB1942005FCD25 /* __HookZZ_MDDylib.mm in Sources */,
+				28F5081D20BB1942005FCD25 /* MDMethodTrace.m in Sources */,
+				28F5084620BB1B6E005FCD25 /* HookZZObjcMsg.m in Sources */,
+				28F5084420BB1A83005FCD25 /* Print.m in Sources */,
+				28F5082E20BB1942005FCD25 /* fishhook.c in Sources */,
+				28F5082B20BB1942005FCD25 /* AntiAntiDebug.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28F5080420BB1942005FCD25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F5080020BB1942005FCD25 /* 测试HookZZ-MDDylib */;
+			targetProxy = 28F5080320BB1942005FCD25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		28F5083520BB1942005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		28F5083620BB1942005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28F5083820BB1942005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "测试HookZZ-MDDylib/测试HookZZ-MDDylib-Prefix.pch";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/lib测试HookZZ-MDDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+					"$(PROJECT_DIR)/WLL-HookZZ",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"测试HookZZ-MDDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+					"-lcycript",
+					"-framework",
+					RevealServer,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		28F5083920BB1942005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks/**",
+					"$(MonkeyDevPath)/Librarys/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "测试HookZZ-MDDylib/测试HookZZ-MDDylib-Prefix.pch";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/include",
+					"$(MonkeyDevTheosPath)/vendor/include/**",
+				);
+				INSTALL_PATH = "@executable_path/Frameworks/lib测试HookZZ-MDDylib.dylib";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(MonkeyDevPath)/Frameworks",
+					"$(MonkeyDevTheosPath)/vendor/lib/**",
+					"$(PROJECT_DIR)/WLL-HookZZ",
+				);
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-DTHEOS_INSTANCE_NAME=\"\\\"测试HookZZ-MDDylib\\\"\"",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-weak_library",
+					"/usr/lib/libc++.dylib",
+					"-weak_library",
+					"/usr/lib/libstdc++.dylib",
+					"-weak_library",
+					"$(MonkeyDevPath)/Frameworks/libsubstrate.dylib",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28F5083B20BB1942005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "测试HookZZ-MD/Info.plist";
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZZ-MD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28F5083C20BB1942005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "测试HookZZ-MD/Info.plist";
+				MONKEYDEV_ADD_SUBSTRATE = YES;
+				MONKEYDEV_CLASS_DUMP = NO;
+				MONKEYDEV_INSERT_DYLIB = YES;
+				MONKEYDEV_RESTORE_SYMBOL = NO;
+				MONKEYDEV_TARGET_APP = Optional;
+				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				PODS_ROOT = "${SRCROOT}/Pods";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZZ-MD";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28F507E720BB1942005FCD25 /* Build configuration list for PBXProject "测试HookZZ-MD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5083520BB1942005FCD25 /* Debug */,
+				28F5083620BB1942005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F5083720BB1942005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZZ-MDDylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5083820BB1942005FCD25 /* Debug */,
+				28F5083920BB1942005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F5083A20BB1942005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZZ-MD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5083B20BB1942005FCD25 /* Debug */,
+				28F5083C20BB1942005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28F507E420BB1942005FCD25 /* Project object */;
+}

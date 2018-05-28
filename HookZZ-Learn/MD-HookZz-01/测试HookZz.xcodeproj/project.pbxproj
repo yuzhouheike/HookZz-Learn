@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28F5071220BB1539005FCD25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5071120BB1539005FCD25 /* AppDelegate.m */; };
+		28F5071520BB1539005FCD25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5071420BB1539005FCD25 /* ViewController.m */; };
+		28F5071820BB1539005FCD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5071620BB1539005FCD25 /* Main.storyboard */; };
+		28F5071A20BB1539005FCD25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F5071920BB1539005FCD25 /* Assets.xcassets */; };
+		28F5071D20BB1539005FCD25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5071B20BB1539005FCD25 /* LaunchScreen.storyboard */; };
+		28F5072020BB1539005FCD25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5071F20BB1539005FCD25 /* main.m */; };
+		28F5072A20BB1539005FCD25 /* __HookZzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5072920BB1539005FCD25 /* __HookZzTests.m */; };
+		28F5073520BB1539005FCD25 /* __HookZzUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5073420BB1539005FCD25 /* __HookZzUITests.m */; };
+		28F5074620BB1559005FCD25 /* libhookzz.static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F5074520BB1559005FCD25 /* libhookzz.static.a */; };
+		28F5074820BB15DA005FCD25 /* printf.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5074720BB15DA005FCD25 /* printf.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		28F5074A20BB1746005FCD25 /* objc-msg.m in Sources */ = {isa = PBXBuildFile; fileRef = 28F5074920BB1746005FCD25 /* objc-msg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28F5072620BB1539005FCD25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28F5070520BB1539005FCD25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F5070C20BB1539005FCD25;
+			remoteInfo = "测试HookZz";
+		};
+		28F5073120BB1539005FCD25 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28F5070520BB1539005FCD25 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28F5070C20BB1539005FCD25;
+			remoteInfo = "测试HookZz";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28F5070D20BB1539005FCD25 /* 测试HookZz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "测试HookZz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F5071020BB1539005FCD25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		28F5071120BB1539005FCD25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		28F5071320BB1539005FCD25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		28F5071420BB1539005FCD25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		28F5071720BB1539005FCD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28F5071920BB1539005FCD25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28F5071C20BB1539005FCD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28F5071E20BB1539005FCD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F5071F20BB1539005FCD25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		28F5072520BB1539005FCD25 /* 测试HookZzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "测试HookZzTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F5072920BB1539005FCD25 /* __HookZzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __HookZzTests.m; sourceTree = "<group>"; };
+		28F5072B20BB1539005FCD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F5073020BB1539005FCD25 /* 测试HookZzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "测试HookZzUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28F5073420BB1539005FCD25 /* __HookZzUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = __HookZzUITests.m; sourceTree = "<group>"; };
+		28F5073620BB1539005FCD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28F5074420BB1559005FCD25 /* hookzz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hookzz.h; sourceTree = "<group>"; };
+		28F5074520BB1559005FCD25 /* libhookzz.static.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libhookzz.static.a; sourceTree = "<group>"; };
+		28F5074720BB15DA005FCD25 /* printf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = printf.m; sourceTree = "<group>"; };
+		28F5074920BB1746005FCD25 /* objc-msg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "objc-msg.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28F5070A20BB1539005FCD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5074620BB1559005FCD25 /* libhookzz.static.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072220BB1539005FCD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072D20BB1539005FCD25 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		28F5070420BB1539005FCD25 = {
+			isa = PBXGroup;
+			children = (
+				28F5074220BB1559005FCD25 /* WLL-HookZZ */,
+				28F5070F20BB1539005FCD25 /* 测试HookZz */,
+				28F5072820BB1539005FCD25 /* 测试HookZzTests */,
+				28F5073320BB1539005FCD25 /* 测试HookZzUITests */,
+				28F5070E20BB1539005FCD25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28F5070E20BB1539005FCD25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28F5070D20BB1539005FCD25 /* 测试HookZz.app */,
+				28F5072520BB1539005FCD25 /* 测试HookZzTests.xctest */,
+				28F5073020BB1539005FCD25 /* 测试HookZzUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28F5070F20BB1539005FCD25 /* 测试HookZz */ = {
+			isa = PBXGroup;
+			children = (
+				28F5071020BB1539005FCD25 /* AppDelegate.h */,
+				28F5071120BB1539005FCD25 /* AppDelegate.m */,
+				28F5071320BB1539005FCD25 /* ViewController.h */,
+				28F5074920BB1746005FCD25 /* objc-msg.m */,
+				28F5074720BB15DA005FCD25 /* printf.m */,
+				28F5071420BB1539005FCD25 /* ViewController.m */,
+				28F5071620BB1539005FCD25 /* Main.storyboard */,
+				28F5071920BB1539005FCD25 /* Assets.xcassets */,
+				28F5071B20BB1539005FCD25 /* LaunchScreen.storyboard */,
+				28F5071E20BB1539005FCD25 /* Info.plist */,
+				28F5071F20BB1539005FCD25 /* main.m */,
+			);
+			path = "测试HookZz";
+			sourceTree = "<group>";
+		};
+		28F5072820BB1539005FCD25 /* 测试HookZzTests */ = {
+			isa = PBXGroup;
+			children = (
+				28F5072920BB1539005FCD25 /* __HookZzTests.m */,
+				28F5072B20BB1539005FCD25 /* Info.plist */,
+			);
+			path = "测试HookZzTests";
+			sourceTree = "<group>";
+		};
+		28F5073320BB1539005FCD25 /* 测试HookZzUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28F5073420BB1539005FCD25 /* __HookZzUITests.m */,
+				28F5073620BB1539005FCD25 /* Info.plist */,
+			);
+			path = "测试HookZzUITests";
+			sourceTree = "<group>";
+		};
+		28F5074220BB1559005FCD25 /* WLL-HookZZ */ = {
+			isa = PBXGroup;
+			children = (
+				28F5074320BB1559005FCD25 /* include */,
+				28F5074520BB1559005FCD25 /* libhookzz.static.a */,
+			);
+			path = "WLL-HookZZ";
+			sourceTree = "<group>";
+		};
+		28F5074320BB1559005FCD25 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				28F5074420BB1559005FCD25 /* hookzz.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28F5070C20BB1539005FCD25 /* 测试HookZz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F5073920BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZz" */;
+			buildPhases = (
+				28F5070920BB1539005FCD25 /* Sources */,
+				28F5070A20BB1539005FCD25 /* Frameworks */,
+				28F5070B20BB1539005FCD25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "测试HookZz";
+			productName = "测试HookZz";
+			productReference = 28F5070D20BB1539005FCD25 /* 测试HookZz.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28F5072420BB1539005FCD25 /* 测试HookZzTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F5073C20BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZzTests" */;
+			buildPhases = (
+				28F5072120BB1539005FCD25 /* Sources */,
+				28F5072220BB1539005FCD25 /* Frameworks */,
+				28F5072320BB1539005FCD25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28F5072720BB1539005FCD25 /* PBXTargetDependency */,
+			);
+			name = "测试HookZzTests";
+			productName = "测试HookZzTests";
+			productReference = 28F5072520BB1539005FCD25 /* 测试HookZzTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28F5072F20BB1539005FCD25 /* 测试HookZzUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28F5073F20BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZzUITests" */;
+			buildPhases = (
+				28F5072C20BB1539005FCD25 /* Sources */,
+				28F5072D20BB1539005FCD25 /* Frameworks */,
+				28F5072E20BB1539005FCD25 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28F5073220BB1539005FCD25 /* PBXTargetDependency */,
+			);
+			name = "测试HookZzUITests";
+			productName = "测试HookZzUITests";
+			productReference = 28F5073020BB1539005FCD25 /* 测试HookZzUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28F5070520BB1539005FCD25 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "王磊磊";
+				TargetAttributes = {
+					28F5070C20BB1539005FCD25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					28F5072420BB1539005FCD25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28F5070C20BB1539005FCD25;
+					};
+					28F5072F20BB1539005FCD25 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28F5070C20BB1539005FCD25;
+					};
+				};
+			};
+			buildConfigurationList = 28F5070820BB1539005FCD25 /* Build configuration list for PBXProject "测试HookZz" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 28F5070420BB1539005FCD25;
+			productRefGroup = 28F5070E20BB1539005FCD25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28F5070C20BB1539005FCD25 /* 测试HookZz */,
+				28F5072420BB1539005FCD25 /* 测试HookZzTests */,
+				28F5072F20BB1539005FCD25 /* 测试HookZzUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28F5070B20BB1539005FCD25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5071D20BB1539005FCD25 /* LaunchScreen.storyboard in Resources */,
+				28F5071A20BB1539005FCD25 /* Assets.xcassets in Resources */,
+				28F5071820BB1539005FCD25 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072320BB1539005FCD25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072E20BB1539005FCD25 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28F5070920BB1539005FCD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5071520BB1539005FCD25 /* ViewController.m in Sources */,
+				28F5072020BB1539005FCD25 /* main.m in Sources */,
+				28F5071220BB1539005FCD25 /* AppDelegate.m in Sources */,
+				28F5074820BB15DA005FCD25 /* printf.m in Sources */,
+				28F5074A20BB1746005FCD25 /* objc-msg.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072120BB1539005FCD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5072A20BB1539005FCD25 /* __HookZzTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28F5072C20BB1539005FCD25 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28F5073520BB1539005FCD25 /* __HookZzUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28F5072720BB1539005FCD25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F5070C20BB1539005FCD25 /* 测试HookZz */;
+			targetProxy = 28F5072620BB1539005FCD25 /* PBXContainerItemProxy */;
+		};
+		28F5073220BB1539005FCD25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28F5070C20BB1539005FCD25 /* 测试HookZz */;
+			targetProxy = 28F5073120BB1539005FCD25 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28F5071620BB1539005FCD25 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28F5071720BB1539005FCD25 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28F5071B20BB1539005FCD25 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28F5071C20BB1539005FCD25 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28F5073720BB1539005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		28F5073820BB1539005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28F5073A20BB1539005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "测试HookZz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WLL-HookZZ",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28F5073B20BB1539005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = "测试HookZz/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WLL-HookZZ",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZz";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		28F5073D20BB1539005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				INFOPLIST_FILE = "测试HookZzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/测试HookZz.app/测试HookZz";
+			};
+			name = Debug;
+		};
+		28F5073E20BB1539005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				INFOPLIST_FILE = "测试HookZzTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZzTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/测试HookZz.app/测试HookZz";
+			};
+			name = Release;
+		};
+		28F5074020BB1539005FCD25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				INFOPLIST_FILE = "测试HookZzUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "测试HookZz";
+			};
+			name = Debug;
+		};
+		28F5074120BB1539005FCD25 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8K524Q8368;
+				INFOPLIST_FILE = "测试HookZzUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yuzhouheike.cn.--HookZzUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "测试HookZz";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28F5070820BB1539005FCD25 /* Build configuration list for PBXProject "测试HookZz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5073720BB1539005FCD25 /* Debug */,
+				28F5073820BB1539005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F5073920BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5073A20BB1539005FCD25 /* Debug */,
+				28F5073B20BB1539005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F5073C20BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZzTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5073D20BB1539005FCD25 /* Debug */,
+				28F5073E20BB1539005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28F5073F20BB1539005FCD25 /* Build configuration list for PBXNativeTarget "测试HookZzUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28F5074020BB1539005FCD25 /* Debug */,
+				28F5074120BB1539005FCD25 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 28F5070520BB1539005FCD25 /* Project object */;
+}
