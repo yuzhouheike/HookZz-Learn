@@ -55,6 +55,7 @@ char decollators[512]           = {0};
 + (void)hook_objc_msgSend {
     DebugLogControlerEnableLog();
     ZzHookGOT("objc_msgSend", NULL, NULL, objc_msgSend_pre_call, objc_msgSend_post_call);
+//    ZzHookGOT("objc_msgSend", objc_msgSendPTR, NULL, objc_msgSend_pre_call, NULL);
 }
 
 void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
