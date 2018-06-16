@@ -13,6 +13,8 @@
 //  Copyright © 2018年 王磊磊. All rights reserved.
 //
 
+#import <objc/runtime.h>
+
 #import <Foundation/Foundation.h>
 #import <Foundation/Foundation.h>
 #import <dlfcn.h>
@@ -53,9 +55,9 @@ char decollators[512]           = {0};
 }
 
 + (void)hook_objc_msgSend {
-    DebugLogControlerEnableLog();
-    ZzHookGOT("objc_msgSend", NULL, NULL, objc_msgSend_pre_call, objc_msgSend_post_call);
+//    DebugLogControlerEnableLog();
 //    ZzHookGOT("objc_msgSend", objc_msgSendPTR, NULL, objc_msgSend_pre_call, NULL);
+    ZzHookGOT("objc_msgSend", NULL, NULL, objc_msgSend_pre_call, NULL);
 }
 
 void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
@@ -71,7 +73,17 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
         return;
     decollators[ts->size * 3] = '\0';
     
+    
+    
+    if(strcmp(className, "[UpdateSelf showLoading]") == 0){
+        
+        return;
+    }
+    
     printf("[OCMethodMonitor|%ld] %s [%s %s]\n", ts->thread_id, decollators, className, selector);
+
+    
+//    printf("[OCMethodMonitor|%ld] %s [%s %s]\n", ts->thread_id, decollators, className, selector);
 }
 
 void objc_msgSend_post_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
