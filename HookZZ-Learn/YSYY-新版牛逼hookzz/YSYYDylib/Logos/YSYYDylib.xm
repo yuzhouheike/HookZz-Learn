@@ -2,25 +2,45 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CustomViewController
+//AdsameBannerView
 
-@property (nonatomic, copy) NSString* newProperty;
+%hook AdsameBannerView
+- (AdsameBannerView*)initWithFrame:(id)arg1{
 
-+ (void)classMethod;
+	return nil;
+}
 
-- (NSString*)getMyName;
+%end
 
-- (void)newMethod:(NSString*) output;
+%hook CNAdPlayerView
 
-@end
+-(CNAdPlayerView*)initWithFrame:(id)arg1{
 
-%hook CustomViewController
+	return nil;
+}
 
-+ (void)classMethod
+%end
+
+%hook CNADPlayerUIKit
+
+-(CNADPlayerUIKit *)initWithFrame:(id)arg1{
+
+	return nil;
+}
+
+%end
+
+%hook AdMasterMobileTracking
++(id)sharedInstance{
+
+	return nil;
+}
+
+-(AdMasterMobileTracking*)init
 {
 	%log;
 
-	%orig;
+	return nil;
 }
 
 %new
@@ -38,23 +58,5 @@
     objc_setAssociatedObject(self, @selector(newProperty), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NSString*)getMyName
-{
-	%log;
-    
-    NSString* password = MSHookIvar<NSString*>(self,"_password");
-    
-    NSLog(@"password:%@", password);
-    
-    [%c(CustomViewController) classMethod];
-    
-    [self newMethod:@"output"];
-    
-    self.newProperty = @"newProperty";
-    
-    NSLog(@"newProperty : %@", self.newProperty);
-
-	return %orig();
-}
 
 %end

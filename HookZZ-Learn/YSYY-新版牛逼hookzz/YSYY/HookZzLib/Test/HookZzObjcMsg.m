@@ -53,9 +53,14 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
     char *selector = (char *)rs->ZREG(1);
     id tmpObject = (id)rs->ZREG(0);
     Class tmpClass  = object_getClass(tmpObject);
+   
     if (!tmpClass)
         return;
     const char *className               = class_getName(tmpClass);
+    
+    if (!strstr(className, "Ad") && !strstr(className, "Home")) {
+        return;
+    }
     
     memset(decollators, '-', 512);
     if (ts->size * 3 >= 512)
@@ -66,7 +71,7 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
 }
 
 void objc_msgSend_post_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
-    printf("post call success.\n");
+//    printf("post call success.\n");
 }
 
 @end
