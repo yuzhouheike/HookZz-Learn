@@ -58,9 +58,9 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
         return;
     const char *className               = class_getName(tmpClass);
     
-    if (!strstr(className, "Ad") && !strstr(className, "Home")) {
-        return;
-    }
+//    if (!strstr(className, "Ad")) {
+//        return;
+//    }
     
     memset(decollators, '-', 512);
     if (ts->size * 3 >= 512)

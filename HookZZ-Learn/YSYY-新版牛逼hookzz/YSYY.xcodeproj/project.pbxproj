@@ -28,7 +28,6 @@
 		207BBB2D20D500D700523BF5 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 207BBB2C20D500D700523BF5 /* fishhook.h */; };
 		207BBB2F20D500D700523BF5 /* YSYYDylib.h in Headers */ = {isa = PBXBuildFile; fileRef = 207BBB2E20D500D700523BF5 /* YSYYDylib.h */; };
 		207BBB3120D500D700523BF5 /* YSYYDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 207BBB3020D500D700523BF5 /* YSYYDylib.m */; };
-		207BBB4220D5072700523BF5 /* HookZzObjcMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 207BBB3D20D5072700523BF5 /* HookZzObjcMsg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		207BBB4320D5072700523BF5 /* hookzz.h in Headers */ = {isa = PBXBuildFile; fileRef = 207BBB3F20D5072700523BF5 /* hookzz.h */; };
 		207BBB4420D5072700523BF5 /* libhookzz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BBB4020D5072700523BF5 /* libhookzz.a */; };
 /* End PBXBuildFile section */
@@ -445,7 +444,6 @@
 			files = (
 				207BBB1620D500D700523BF5 /* MDCycriptManager.m in Sources */,
 				207BBB1E20D500D700523BF5 /* ANYMethodLog.m in Sources */,
-				207BBB4220D5072700523BF5 /* HookZzObjcMsg.m in Sources */,
 				207BBB1220D500D700523BF5 /* MDConfigManager.m in Sources */,
 				207BBB3120D500D700523BF5 /* YSYYDylib.m in Sources */,
 				207BBB2320D500D700523BF5 /* LLDBTools.mm in Sources */,
@@ -699,7 +697,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = www.YSYY;
+				PRODUCT_BUNDLE_IDENTIFIER = aaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -719,7 +717,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = www.YSYY;
+				PRODUCT_BUNDLE_IDENTIFIER = aaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

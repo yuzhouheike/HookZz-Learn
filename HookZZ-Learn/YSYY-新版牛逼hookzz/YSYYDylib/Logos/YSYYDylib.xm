@@ -3,60 +3,63 @@
 #import <UIKit/UIKit.h>
 
 //AdsameBannerView
+%hook CQDetailViewController
+-(void) didSelectRowAtIndexPath:(id)arg1 andWithModel:(id)arg2 {
 
-%hook AdsameBannerView
-- (AdsameBannerView*)initWithFrame:(id)arg1{
-
-	return nil;
-}
-
-%end
-
-%hook CNAdPlayerView
-
--(CNAdPlayerView*)initWithFrame:(id)arg1{
-
-	return nil;
-}
-
-%end
-
-%hook CNADPlayerUIKit
-
--(CNADPlayerUIKit *)initWithFrame:(id)arg1{
-
-	return nil;
-}
-
-%end
-
-%hook AdMasterMobileTracking
-+(id)sharedInstance{
-
-	return nil;
-}
-
--(AdMasterMobileTracking*)init
-{
 	%log;
 
-	return nil;
+	return %orig;
 }
 
-%new
--(void)newMethod:(NSString*) output{
-    NSLog(@"This is a new method : %@", output);
+%end
+
+%hook CQUserController
+-(BOOL)isQiAnShow{
+
+	return YES;
+
 }
 
-%new
-- (id)newProperty {
-    return objc_getAssociatedObject(self, @selector(newProperty));
+%end
+
+
+
+%hook CQHelpCenterModel
+-(BOOL) isQiAnDianUser {
+	return 1;
 }
 
-%new
-- (void)setNewProperty:(id)value {
-    objc_setAssociatedObject(self, @selector(newProperty), value, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
++(BOOL) isQiAnDianUser {
+	return 1;
 }
 
+%end
+
+%hook CQUser
+- (BOOL)isQiAnUser {
+	return 1;
+}
+
+- (BOOL)qiAnDianUserIsOutDate{
+
+	return 0;
+}
+-(BOOL)isVIPUser{
+	return 1;
+}
+%end
+
+%hook CourseListItemModel
+
+-(NSString *)course_price {
+
+	return @"0";
+}
+
+-(NSString *)purchase {
+
+	return @"1";
+}
+//purchase
 
 %end
