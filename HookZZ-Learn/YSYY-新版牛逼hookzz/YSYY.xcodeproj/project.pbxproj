@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20483C6D20DA8EED005212E7 /* HookZzObjcMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 207BBB3D20D5072700523BF5 /* HookZzObjcMsg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		207BBAF520D500D700523BF5 /* MDConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 207BBAF420D500D700523BF5 /* MDConfig.plist */; };
 		207BBAFF20D500D700523BF5 /* libYSYYDylib.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 207BBAFE20D500D700523BF5 /* libYSYYDylib.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		207BBB0420D500D700523BF5 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BBB0320D500D700523BF5 /* JavaScriptCore.framework */; };
@@ -443,7 +442,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20483C6D20DA8EED005212E7 /* HookZzObjcMsg.m in Sources */,
 				207BBB1620D500D700523BF5 /* MDCycriptManager.m in Sources */,
 				207BBB1E20D500D700523BF5 /* ANYMethodLog.m in Sources */,
 				207BBB1220D500D700523BF5 /* MDConfigManager.m in Sources */,
