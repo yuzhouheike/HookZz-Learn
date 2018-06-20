@@ -51,6 +51,7 @@ char decollators[512]           = {0};
 
 void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
     char *selector = (char *)rs->ZREG(1);
+//    char *arg1 = (char *)rs->ZREG(2);
     id tmpObject = (id)rs->ZREG(0);
     Class tmpClass  = object_getClass(tmpObject);
    
@@ -58,16 +59,27 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
         return;
     const char *className               = class_getName(tmpClass);
     
-    if (!strstr(className, "Ad") && !strstr(className, "Home")) {
-        return;
-    }
-    
+//    if (strstr(className, "__")  ||  strstr(className, "YY") ||  strstr(className, "NS") ||  strstr(className, "MJ")) {
+//        return;
+//    }__NSCFConstantString
+//
+//    if ( !strstr(className, "CQ")) {
+//        return;
+//    }
+//
     memset(decollators, '-', 512);
     if (ts->size * 3 >= 512)
         return;
     decollators[ts->size * 3] = '\0';
     
-    printf("[OCMethodMonitor|%ld] %s [%s %s]\n", ts->thread_id, decollators, className, selector);
+    if (0) {
+        
+//          printf("[OCMethodMonitor|%ld] %s [%s %s %s ]\n", ts->thread_id, decollators, className, selector, arg1);
+    }else {
+        printf("[OCMethodMonitor|%ld] %s [%s %s]\n", ts->thread_id, decollators, className, selector);
+    }
+    
+    
 }
 
 void objc_msgSend_post_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
