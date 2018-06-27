@@ -51,17 +51,43 @@ char decollators[512]           = {0};
 
 void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic *cs, const HookEntryInfo *info) {
     char *selector = (char *)rs->ZREG(1);
-//    char *arg1 = (char *)rs->ZREG(2);
+    id arg1 = (id)rs->ZREG(2);
     id tmpObject = (id)rs->ZREG(0);
     Class tmpClass  = object_getClass(tmpObject);
-   
+//    class_getClassMethod
+    NSString *selStr = [NSString stringWithFormat:@"%s", selector];
+    
+  
     if (!tmpClass)
         return;
     const char *className               = class_getName(tmpClass);
     
-//    if (strstr(className, "__")  ||  strstr(className, "YY") ||  strstr(className, "NS") ||  strstr(className, "MJ")) {
-//        return;
-//    }__NSCFConstantString
+    SEL selectter = NSSelectorFromString(selStr);
+    if (!selectter) {
+        return;
+    }
+//    class_getProperty(<#Class  _Nullable cls#>, <#const char * _Nonnull name#>)
+    Method tempMethod = class_getInstanceMethod(tmpClass, selectter);
+    
+    
+    if (!arg1) {
+        return;
+    }
+    
+    if (!tempMethod) {
+        return;
+    }
+    
+    const char *tempMethodStr = sel_getName(method_getName(tempMethod));
+    
+    const char *arg1Name = method_getTypeEncoding(tempMethod);
+    
+    
+    
+    if (strstr(className, "__")  ||  strstr(className, "YY") ||  strstr(className, "NS") ||  strstr(className, "MJ") || strstr(className, "UI") || strstr(className, "NS")|| strstr(className, "BLY") || strstr(className, "JS") || strstr(className, "SD") || strstr(className, "CQPageControl") ) {
+        return;
+    }
+//    __NSCFConstantString CQPageControl
 //
 //    if ( !strstr(className, "CQ")) {
 //        return;
@@ -72,11 +98,11 @@ void objc_msgSend_pre_call(RegState *rs, ThreadStackPublic *ts, CallStackPublic 
         return;
     decollators[ts->size * 3] = '\0';
     
-    if (0) {
+    if (1) {
         
-//          printf("[OCMethodMonitor|%ld] %s [%s %s %s ]\n", ts->thread_id, decollators, className, selector, arg1);
+        printf("-(%s) [%ld] %s [%s %s ]   \n%s\n", arg1Name,ts->thread_id, decollators, className, selector, tempMethodStr);
     }else {
-        printf("[OCMethodMonitor|%ld] %s [%s %s]\n", ts->thread_id, decollators, className, selector);
+        printf("-(%s) [OCMethodMonitor|%ld] %s [%s %s]\n",arg1Name, ts->thread_id, decollators, className, selector);
     }
     
     

@@ -116,7 +116,7 @@
 
 -(NSString *)purchase {
 %log;
- return @"1";
+ return @"0";
 }
 -(int)course_status {
 
@@ -124,7 +124,17 @@
 
  return 0;
 }
+
+-(int)course_cache_permission{
+%log;
+	return 0;
+}
 //purchase  is_company_have
+
+// -(double)end_time{
+// %log;
+// 	return 1529749256;
+// }
 
 %end
 
@@ -249,3 +259,86 @@
 //
 // }
  %end
+
+ %hook WXOMTAUser
+ //
+ // -(int) userType{
+ //
+	//  return 1;
+ // }
+
+ %end
+
+
+%hook CQCourseCacheService
+
+-(id)getDataFromDBWithSQL:(id)sql{
+
+	%log;
+
+	NSLog(@"%@", %orig);
+	return %orig;
+}
+
+%end
+
+ //WBSDKFMDatabase extractSQL:argumentsList:intoString:arguments:
+%hook WBSDKFMDatabase
+
+-(id)extractSQL:(id)arg1 argumentsList:(id)arg2 intoString:(id)arg3 arguments:(id)arg4 {
+
+	 %log;
+
+	 NSLog(@"%@", %orig);
+	 return %orig;
+}
+
+%end
+//CQDBTool
+%hook CQDBTool
+
+-(id)DataBase:(id)arg1 excuteSql:(id)arg2 keyTypes:(id)arg3 {
+
+	%log;
+
+	NSLog(@"%@", %orig);
+	return %orig;
+
+}
+%end
+//[AFHTTPRequestSerializer addObserver:forKeyPath:options:context:]
+
+%hook AFHTTPRequestSerializer
+
+// -(void)addObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(id)options context:( id)context {
+//
+// 	%log;
+//
+// 	 %orig;
+// }
+
+
+%end
+
+//WXOMTASocket socket:didReadData:withTag:
+
+%hook WXOMTASocket
+-(void)handleBodyResult:(id)arg1 configData:(id)arg2 {
+
+
+	%log;
+
+	NSLog(@"%@", arg1);
+
+	%orig;
+}
+-(void)socket:(id)arg1 didReadData:(id)arg2 withTag:(id)arg3 {
+
+	%log;
+	NSString *result =[[ NSString alloc] initWithData:arg2 encoding:NSUTF8StringEncoding];
+	NSLog(@"=====================  ;;;;;%@ ============= %@", arg2,result);
+ %orig;
+}
+
+
+%end

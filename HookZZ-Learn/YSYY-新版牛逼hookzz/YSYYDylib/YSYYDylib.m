@@ -54,6 +54,18 @@ CHOptimizedClassMethod0(self, void, CustomViewController, classMethod){
     CHSuper0(CustomViewController, classMethod);
 }
 
+CHDeclareClass(CQPlayLogic)
+
+CHOptimizedMethod0(self, void, CQPlayLogic, getOffLineVideoAndPaly) {
+
+    CHSuper0(CQPlayLogic, getOffLineVideoAndPaly);
+}
+//CHMethod(0,CQPlayLogic,getOffLineVideoAndPaly) ;
+//{
+//
+//    CHSuper0(CQPlayLogic, getOffLineVideoAndPaly);
+//}
+
 CHOptimizedMethod0(self, NSString*, CustomViewController, getMyName){
     //get origin value
     NSString* originName = CHSuper(0, CustomViewController, getMyName);
@@ -80,7 +92,17 @@ CHOptimizedMethod0(self, NSString*, CustomViewController, getMyName){
 //add new property
 CHPropertyRetainNonatomic(CustomViewController, NSString*, newProperty, setNewProperty);
 
+
+
+
+
 CHConstructor{
+    
+    CHLoadLateClass(CQPlayLogic);
+    CHClassHook0(CQPlayLogic, getOffLineVideoAndPaly);
+    
+    
+    
     CHLoadLateClass(CustomViewController);
     CHClassHook0(CustomViewController, getMyName);
     CHClassHook0(CustomViewController, classMethod);
@@ -88,4 +110,5 @@ CHConstructor{
     CHHook0(CustomViewController, newProperty);
     CHHook1(CustomViewController, setNewProperty);
 }
+
 
