@@ -30,7 +30,6 @@
 		207BBB3120D500D700523BF5 /* YSYYDylib.m in Sources */ = {isa = PBXBuildFile; fileRef = 207BBB3020D500D700523BF5 /* YSYYDylib.m */; };
 		207BBB4320D5072700523BF5 /* hookzz.h in Headers */ = {isa = PBXBuildFile; fileRef = 207BBB3F20D5072700523BF5 /* hookzz.h */; };
 		207BBB4420D5072700523BF5 /* libhookzz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 207BBB4020D5072700523BF5 /* libhookzz.a */; };
-		20E0E25220DE1B7E00193C37 /* HookZzObjcMsg.m in Sources */ = {isa = PBXBuildFile; fileRef = 207BBB3D20D5072700523BF5 /* HookZzObjcMsg.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -443,7 +442,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20E0E25220DE1B7E00193C37 /* HookZzObjcMsg.m in Sources */,
 				207BBB1620D500D700523BF5 /* MDCycriptManager.m in Sources */,
 				207BBB1E20D500D700523BF5 /* ANYMethodLog.m in Sources */,
 				207BBB1220D500D700523BF5 /* MDConfigManager.m in Sources */,
